@@ -2,6 +2,8 @@
 
 A lightweight TypeScript/Node.js client for fetching subbed anime listings from hianime.to.
 
+for better documentation, visit [hianime documentation](https://hianime.mintlify.app/)
+
 - Written in TypeScript
 - Promise-based API
 - Ships types for first-class TS support
