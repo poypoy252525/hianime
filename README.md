@@ -161,6 +161,56 @@ Response
 
 </details>
 
+<a id="gettopairing"></a>
+
+<details>
+  <summary><strong>getTopAiring(page?: number): Promise<HianimeResult></strong></summary>
+
+Example
+
+```ts
+const hianime = new Hianime();
+
+const result = await hianime.getTopAiring();
+console.log(JSON.stringify(result, null, 2));
+```
+
+Response
+
+```json
+{
+  "page": 1,
+  "totalPage": 11,
+  "hasNextPage": true,
+  "results": [
+    {
+      "id": "/dan-da-dan-season-2-19793",
+      "image": "https://cdn.noitatnemucod.net/thumbnail/300x400/100/4303d95c719242ab6e459d477b0a8c08.jpg",
+      "title": "Dan Da Dan Season 2",
+      "type": "TV",
+      "language": {
+        "sub": "7",
+        "dub": "7"
+      },
+      "dataId": "19793"
+    },
+    {
+      "id": "/no-longer-allowed-in-another-world-19247",
+      "image": "https://cdn.noitatnemucod.net/thumbnail/300x400/100/8b97e75f9de748632c4458eefb3ec8d8.jpg",
+      "title": "No Longer Allowed In Another World",
+      "type": "TV",
+      "language": {
+        "sub": "12",
+        "dub": "12"
+      },
+      "dataId": "19247"
+    }
+  ]
+}
+```
+
+</details>
+
 <a id="getmostpopular"></a>
 
 <details>
