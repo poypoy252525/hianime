@@ -1,0 +1,57 @@
+{
+  "name": "hianime",
+  "version": "1.2.0",
+  "description": "a scraper for hianime",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poypoy252525/hianime.git"
+  },
+  "homepage": "https://github.com/poypoy252525/hianime#readme",
+  "bugs": {
+    "url": "https://github.com/poypoy252525/hianime/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only test/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "hianime",
+    "anime",
+    "subbed",
+    "anime-list",
+    "anime-listing",
+    "anime-api",
+    "anime-to",
+    "anime-to-api",
+    "anime-to-list",
+    "anime-to-listing",
+    "anime-to-subbed",
+    "anime-to-dubbed",
+    "anime-to-subbed-list",
+    "anime-to-dubbed-list",
+    "anime-to-subbed-listing",
+    "anime-to-dubbed-listing",
+    "hianime-scraper"
+  ],
+  "author": "cjdelfin",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "axios": "^1.11.0",
+    "cheerio": "^1.1.2"
+  }
+}
