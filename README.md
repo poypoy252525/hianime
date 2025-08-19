@@ -21,6 +21,7 @@ yarn add hianime
 - [Exports](#exports)
 - [getSubbedAnime()](#getsubbedanime)
 - [getDubbedAnime()](#getdubbedanime)
+- [getTopAiring()](#gettopairing)
 - [getMostPopular()](#getmostpopular)
 - [getMovies()](#getmovies)
 - [getTVShows()](#gettvshows)
