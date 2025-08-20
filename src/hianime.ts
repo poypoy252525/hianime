@@ -218,6 +218,10 @@ class Hianime {
       }
     );
 
+    sources.headers = {
+      Referer: "https://megacloud.blog/",
+    };
+
     return sources;
   }
 }

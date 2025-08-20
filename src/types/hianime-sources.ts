@@ -1,5 +1,6 @@
 export interface HianimeSources {
-  sources?: Source[];
+  headers: Record<string, string>;
+  sources: Source[];
   tracks?: Track[];
   encrypted?: boolean;
   intro?: Tro;
