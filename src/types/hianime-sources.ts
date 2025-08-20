@@ -3,12 +3,12 @@ export interface HianimeSources {
   sources: Source[];
   tracks?: Track[];
   encrypted?: boolean;
-  intro?: Tro;
-  outro?: Tro;
+  intro?: Timeskip;
+  outro?: Timeskip;
   server?: number;
 }
 
-export interface Tro {
+export interface Timeskip {
   start?: number;
   end?: number;
 }
