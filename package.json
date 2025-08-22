@@ -3,14 +3,14 @@
   "version": "1.3.4",
   "$schema": "https://json.schemastore.org/package",
   "description": "a scraper for hianime",
-  "main": "dist/index.cjs",
+  "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.js"
     }
   },
   "repository": {
