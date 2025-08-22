@@ -31,23 +31,13 @@
     "anime-list",
     "anime-listing",
     "anime-api",
-    "anime-to",
-    "anime-to-api",
-    "anime-to-list",
-    "anime-to-listing",
-    "anime-to-subbed",
-    "anime-to-dubbed",
-    "anime-to-subbed-list",
-    "anime-to-dubbed-list",
-    "anime-to-subbed-listing",
-    "anime-to-dubbed-listing",
-    "hianime-scraper"
+    "hianime-scraper",
+    "anime-scraper"
   ],
   "author": "cjdelfin",
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
-    "@types/node": "^24.3.0",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.2"
   },
