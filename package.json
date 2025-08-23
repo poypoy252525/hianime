@@ -1,6 +1,6 @@
 {
   "name": "hianime",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "$schema": "https://json.schemastore.org/package",
   "description": "a scraper for hianime",
   "main": "dist/index.js",
