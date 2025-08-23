@@ -28,6 +28,7 @@ class Hianime {
         ...(query && { keyword: decodeURIComponent(query) }),
       },
     });
+
     const $ = cheerio.load(data);
     const animeList = $(".tab-content div.film_list-wrap > div.flw-item")
       .map((_, element) => {
@@ -53,7 +54,9 @@ class Hianime {
       .get();
 
     const totalPage = parseInt(
-      $('a[title="Last"]').attr("href")?.split("=")[1] ?? page.toString()
+      $('a[title="Last"]')
+        .attr("href")
+        ?.match(/page=(\d+)/)?.[1] ?? page.toString()
     );
 
     return {
