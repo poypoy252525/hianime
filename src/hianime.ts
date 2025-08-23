@@ -17,12 +17,15 @@ class Hianime {
       | "special"
       | "ona"
       | "ova"
-      | "top-airing",
-    page: number = 1
+      | "top-airing"
+      | "search",
+    page: number = 1,
+    query?: string
   ): Promise<HianimeResult> {
     const { data } = await axios.get(`${this.BASE_URL}/${category}`, {
       params: {
         page: page,
+        ...(query && { keyword: decodeURIComponent(query) }),
       },
     });
     const $ = cheerio.load(data);
@@ -95,6 +98,10 @@ class Hianime {
 
   public async getTopAiring(page: number = 1): Promise<HianimeResult> {
     return this.getAnimeList("top-airing", page);
+  }
+
+  public async search(query: string, page: number = 1): Promise<HianimeResult> {
+    return this.getAnimeList("search", page, query);
   }
 
   public async getEpisodes(dataId: string): Promise<HianimeEpisode[]> {
