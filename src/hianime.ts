@@ -6,6 +6,7 @@ import { HianimeSources } from "./types/hianime-sources";
 
 class Hianime {
   private readonly BASE_URL = "https://hianime.to";
+  private readonly MALSYNC_URL = "https://api.malsync.moe";
 
   private async getAnimeList(
     category:
@@ -105,6 +106,24 @@ class Hianime {
 
   public async search(query: string, page: number = 1): Promise<HianimeResult> {
     return this.getAnimeList("search", page, query);
+  }
+
+  public async getEpisodesByMALID(malId: string): Promise<HianimeEpisode[]> {
+    const { data: malsyncData } = await axios.get(
+      `${this.MALSYNC_URL}/mal/anime/${malId}`
+    );
+
+    const ids = malsyncData.Sites.Zoro;
+
+    if (!ids) {
+      throw new Error(`No Zoro IDs found for MAL ID ${malId}`);
+    }
+
+    let id = Object.keys(ids)[0];
+
+    const episodes = await this.getEpisodes(id ?? "");
+
+    return episodes;
   }
 
   public async getEpisodes(dataId: string): Promise<HianimeEpisode[]> {
